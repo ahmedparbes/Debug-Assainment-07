@@ -5,8 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
+  <title>FakeStore API</title>
+  <!-- All Style Link -->
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="shortcut icon" href="https://fakestoreapi.com/icons/logo.png" type="image/x-icon">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
@@ -18,11 +20,24 @@
 </head>
 
 <body>
-  <header></header>
+  <!-- Header Start Here -->
+  <header id="header">
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://fakestoreapi.com/icons/logo.png" alt="" width="30" height="24"
+            class="d-inline-block align-text-top">
+        </a>
+        <h4 style="text-align: left; margin-top: 20px;">Fake API Store</h4>
+      </div>
+    </nav>
+  </header>
+
+  <!-- main Section Start Here -->
   <main class="main">
     <div class="search-field">
       <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
+        <input id="input-field" class="search-field" type="text" placeholder="Type Your Loved Product" />
         <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
           Search
@@ -32,7 +47,6 @@
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
-          <h1></h1>
         </div>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
@@ -86,7 +100,11 @@
       </div>
     </div>
   </main>
-  <footer></footer>
+
+  <!-- Footer Section Start Here -->
+  <footer>
+
+  </footer>
 
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>
