@@ -15,14 +15,20 @@ const showProducts = (products) => {
     <img class="product-image" src=${image}></img>
       </div>
       <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
+      <hr>
+      <p><b>Category:</b> ${product.category}</p>
+      <p><b>Ratings:</b> ${product.rating.rate}</p>
+      <p><b>Ratings Count:</b> ${product.rating.count}</p>
+      <hr>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn">Add to cart</button>
-      <button id="details-btn" class="btn ">Details</button></div>
+      <button onclick="detailsUi()"  id="details-btn" class="btn ">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -76,5 +82,29 @@ const updateTotal = () => {
     getInputValue("total-tax");
   document.getElementById("total").innerText = parseFloat(grandTotal).toFixed(2);
 };
+
+//advanced way to show element 
+
+const detailsUi = () => {
+  fetch('https://fakestoreapi.com/users')
+    .then(res => res.json())
+    .then(data => loadDetails(data))
+}
+
+const loadDetails = Alldetails => {
+  for (const details of Alldetails) {
+    console.log(details);
+    const div = document.getElementById('user-details');
+    const createDiv = document.createElement('div');
+    div.innerHTML = `
+    <div style="background-color: khaki; border-radius: 10px; padding: 5px;">
+    <li class="list-group-item"><h4>UserName:</h4> ${details.username} </ li >
+  <li class="list-group-item"><h4>City:</h4> ${details.address.city}</li>
+    <li class="list-group-item"><h4>Phone Number:</h4> ${details.phone}</li>
+    </div>
+  `;
+    div.appendChild(createDiv);
+  }
+}
 
 loadProducts();

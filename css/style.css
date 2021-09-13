@@ -41,6 +41,7 @@ body {
   border: 1px solid gray;
   margin: 20px;
   border-radius: 10px;
+  background-color: rgb(250, 250, 250);
 }
 
 /* search Field Style Genarate here */
@@ -62,6 +63,7 @@ body {
   margin: auto;
   margin-top: 50px;
   background-color: lavenderblush;
+  margin-bottom: 20px;
 } 
  .search-button {
   padding: 10px;
@@ -132,4 +134,8 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+.card{
+  width:800px; margin:0 auto;
 }
