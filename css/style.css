@@ -4,14 +4,14 @@ body {
 }
 
 .cart{
-  background-color: rgb(116, 47, 143);
-  color: white;
+  background-color: rgb(95, 26, 124);
+  color: rgb(228, 219, 219);
 }
 
 /* Nav Bar Style */
 
 #header{
-  background-color: rgb(83, 5, 114); 
+  background-color: rgb(92, 10, 124); 
   color: rgb(255, 255, 255);
 }
 
@@ -61,7 +61,7 @@ body {
  }
 
  #input-Id{ 
-  background-color: khaki; 
+  background-color: rgb(247, 246, 243); 
   border: 1px solid green; 
   color: #000000;
   padding: 10px ; 
@@ -85,8 +85,8 @@ body {
 .single-product {
   padding: 10px;
   transition: 0.6s;
-  background-color: rgb(129, 94, 129);
-  color: white;
+  background-color: rgb(231, 228, 203);
+  color: rgb(0, 0, 0);
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
